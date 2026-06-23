@@ -8,10 +8,10 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Rider | How It Works</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -77,15 +77,15 @@
                     "base": "8px"
             },
             "fontFamily": {
-                    "headline-md": ["Hanken Grotesk"],
-                    "headline-sm": ["Hanken Grotesk"],
-                    "body-md": ["Inter"],
-                    "headline-lg-mobile": ["Hanken Grotesk"],
-                    "body-lg": ["Inter"],
-                    "body-sm": ["Inter"],
-                    "headline-lg": ["Hanken Grotesk"],
-                    "label-caps": ["JetBrains Mono"],
-                    "display": ["Hanken Grotesk"]
+                    "headline-md": ["Hanken Grotesk", "system-ui", "sans-serif"],
+                    "headline-sm": ["Hanken Grotesk", "system-ui", "sans-serif"],
+                    "body-md": ["Inter", "system-ui", "sans-serif"],
+                    "headline-lg-mobile": ["Hanken Grotesk", "system-ui", "sans-serif"],
+                    "body-lg": ["Inter", "system-ui", "sans-serif"],
+                    "body-sm": ["Inter", "system-ui", "sans-serif"],
+                    "headline-lg": ["Hanken Grotesk", "system-ui", "sans-serif"],
+                    "label-caps": ["JetBrains Mono", "monospace"],
+                    "display": ["Hanken Grotesk", "system-ui", "sans-serif"]
             },
             "fontSize": {
                     "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
@@ -122,10 +122,12 @@
     <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="Rider home">
 <svg width="40" height="40" viewBox="0 0 52 52" aria-hidden="true" class="shrink-0">
 <circle cx="26" cy="26" r="26" fill="#1565C0"/>
-<polygon points="26,6 29.5,17 41,17 31.5,23.5 35,35 26,28 17,35 20.5,23.5 11,17 22.5,17" fill="none" stroke="#FCDD09" stroke-width="2.2"/>
-<line x1="26" y1="6" x2="26" y2="46" stroke="#FCDD09" stroke-width="1.8"/>
-<line x1="8" y1="17" x2="44" y2="35" stroke="#FCDD09" stroke-width="1.8"/>
-<line x1="44" y1="17" x2="8" y2="35" stroke="#FCDD09" stroke-width="1.8"/>
+<polygon points="26.0,11.0 29.4,21.4 40.3,21.4 31.4,27.8 34.8,38.1 26.0,31.7 17.2,38.1 20.6,27.8 11.7,21.4 22.6,21.4" fill="none" stroke="#FCDD09" stroke-width="2.2"/>
+<line x1="26.0" y1="10.0" x2="26.0" y2="2.0" stroke="#FCDD09" stroke-width="2"/>
+<line x1="41.2" y1="21.1" x2="48.8" y2="18.6" stroke="#FCDD09" stroke-width="2"/>
+<line x1="35.4" y1="38.9" x2="40.1" y2="45.4" stroke="#FCDD09" stroke-width="2"/>
+<line x1="16.6" y1="38.9" x2="11.9" y2="45.4" stroke="#FCDD09" stroke-width="2"/>
+<line x1="10.8" y1="21.1" x2="3.2" y2="18.6" stroke="#FCDD09" stroke-width="2"/>
 </svg>
 <span class="rider-logo">Rider</span>
 <span class="rider-dots" aria-hidden="true">
@@ -347,10 +349,12 @@
 <div class="font-headline-sm text-headline-sm text-on-primary-fixed font-bold text-white mb-8"><span class="footer-logo" style="display:inline-flex;align-items:center;gap:8px;">
 <svg width="22" height="22" viewBox="0 0 52 52" aria-hidden="true">
 <circle cx="26" cy="26" r="26" fill="#1565C0"/>
-<polygon points="26,6 29.5,17 41,17 31.5,23.5 35,35 26,28 17,35 20.5,23.5 11,17 22.5,17" fill="none" stroke="#FCDD09" stroke-width="2.5"/>
-<line x1="26" y1="6" x2="26" y2="46" stroke="#FCDD09" stroke-width="2"/>
-<line x1="8" y1="17" x2="44" y2="35" stroke="#FCDD09" stroke-width="2"/>
-<line x1="44" y1="17" x2="8" y2="35" stroke="#FCDD09" stroke-width="2"/>
+<polygon points="26.0,11.0 29.4,21.4 40.3,21.4 31.4,27.8 34.8,38.1 26.0,31.7 17.2,38.1 20.6,27.8 11.7,21.4 22.6,21.4" fill="none" stroke="#FCDD09" stroke-width="2.6"/>
+<line x1="26.0" y1="10.0" x2="26.0" y2="2.0" stroke="#FCDD09" stroke-width="2.4"/>
+<line x1="41.2" y1="21.1" x2="48.8" y2="18.6" stroke="#FCDD09" stroke-width="2.4"/>
+<line x1="35.4" y1="38.9" x2="40.1" y2="45.4" stroke="#FCDD09" stroke-width="2.4"/>
+<line x1="16.6" y1="38.9" x2="11.9" y2="45.4" stroke="#FCDD09" stroke-width="2.4"/>
+<line x1="10.8" y1="21.1" x2="3.2" y2="18.6" stroke="#FCDD09" stroke-width="2.4"/>
 </svg>
 <span style="font-family:'Hanken Grotesk',sans-serif;font-weight:800;font-size:20px;color:#eaf1ff;letter-spacing:-0.02em;">Rider</span>
 </span></div>

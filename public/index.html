@@ -8,10 +8,10 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Rider | Home</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -80,15 +80,15 @@
                     "base": "8px"
             },
             "fontFamily": {
-                    "headline-md": ["Hanken Grotesk"],
-                    "headline-sm": ["Hanken Grotesk"],
-                    "body-md": ["Inter"],
-                    "headline-lg-mobile": ["Hanken Grotesk"],
-                    "body-lg": ["Inter"],
-                    "body-sm": ["Inter"],
-                    "headline-lg": ["Hanken Grotesk"],
-                    "label-caps": ["JetBrains Mono"],
-                    "display": ["Hanken Grotesk"]
+                    "headline-md": ["Hanken Grotesk", "system-ui", "sans-serif"],
+                    "headline-sm": ["Hanken Grotesk", "system-ui", "sans-serif"],
+                    "body-md": ["Inter", "system-ui", "sans-serif"],
+                    "headline-lg-mobile": ["Hanken Grotesk", "system-ui", "sans-serif"],
+                    "body-lg": ["Inter", "system-ui", "sans-serif"],
+                    "body-sm": ["Inter", "system-ui", "sans-serif"],
+                    "headline-lg": ["Hanken Grotesk", "system-ui", "sans-serif"],
+                    "label-caps": ["JetBrains Mono", "monospace"],
+                    "display": ["Hanken Grotesk", "system-ui", "sans-serif"]
             },
             "fontSize": {
                     "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
@@ -133,10 +133,12 @@
     <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="Rider home">
 <svg width="40" height="40" viewBox="0 0 52 52" aria-hidden="true" class="shrink-0">
 <circle cx="26" cy="26" r="26" fill="#1565C0"/>
-<polygon points="26,6 29.5,17 41,17 31.5,23.5 35,35 26,28 17,35 20.5,23.5 11,17 22.5,17" fill="none" stroke="#FCDD09" stroke-width="2.2"/>
-<line x1="26" y1="6" x2="26" y2="46" stroke="#FCDD09" stroke-width="1.8"/>
-<line x1="8" y1="17" x2="44" y2="35" stroke="#FCDD09" stroke-width="1.8"/>
-<line x1="44" y1="17" x2="8" y2="35" stroke="#FCDD09" stroke-width="1.8"/>
+<polygon points="26.0,11.0 29.4,21.4 40.3,21.4 31.4,27.8 34.8,38.1 26.0,31.7 17.2,38.1 20.6,27.8 11.7,21.4 22.6,21.4" fill="none" stroke="#FCDD09" stroke-width="2.2"/>
+<line x1="26.0" y1="10.0" x2="26.0" y2="2.0" stroke="#FCDD09" stroke-width="2"/>
+<line x1="41.2" y1="21.1" x2="48.8" y2="18.6" stroke="#FCDD09" stroke-width="2"/>
+<line x1="35.4" y1="38.9" x2="40.1" y2="45.4" stroke="#FCDD09" stroke-width="2"/>
+<line x1="16.6" y1="38.9" x2="11.9" y2="45.4" stroke="#FCDD09" stroke-width="2"/>
+<line x1="10.8" y1="21.1" x2="3.2" y2="18.6" stroke="#FCDD09" stroke-width="2"/>
 </svg>
 <span class="rider-logo">Rider</span>
 <span class="rider-dots" aria-hidden="true">
@@ -182,7 +184,7 @@
 <div class="flex flex-col gap-6 z-10">
 <span class="font-label-caps text-label-caps text-secondary tracking-widest bg-secondary-fixed px-3 py-1 rounded-full w-fit uppercase" data-en="FUTURE OF MOBILITY" data-fr="L'AVENIR DE LA MOBILITÉ">FUTURE OF MOBILITY</span>
 <h1 class="font-display text-display leading-tight" data-en="Lower-Cost Ride-Hailing" data-fr="VTC à moindre coût">Lower-Cost Ride-Hailing</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg" data-en="1 Month Free Trial. Then only $X/month. No per-ride commission. The first subscription-based ride platform for urban logistics." data-fr="1 mois d'essai gratuit. Puis seulement X€/mois. Aucune commission par trajet. La première plateforme de VTC par abonnement pour la logistique urbaine.">
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg" data-en="1 Month Free Trial. Then only $X/month. No per-ride commission. The first subscription-based ride platform for urban logistics." data-fr="1 mois d'essai gratuit. Puis seulement X/mois. Aucune commission par trajet. La première plateforme de VTC par abonnement pour la logistique urbaine.">
                     1 Month Free Trial. Then only $X/month. No per-ride commission. The first subscription-based ride platform for urban logistics.
                 </p>
 <div class="flex flex-wrap gap-4 mt-4">
@@ -209,6 +211,27 @@
 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">eco</span><span class="font-label-caps text-label-caps" data-en="CARBON NEUTRAL GOAL" data-fr="OBJECTIF NEUTRE CARBONE">CARBON NEUTRAL GOAL</span></div>
 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">support_agent</span><span class="font-label-caps text-label-caps" data-en="24/7 LIVE SUPPORT" data-fr="SUPPORT 24/7 EN DIRECT">24/7 LIVE SUPPORT</span></div>
 </div>
+</section>
+<!-- Stats Band [PLACEHOLDER NUMBERS - swap before launch] -->
+<section class="py-16 px-margin-desktop bg-secondary text-on-secondary">
+  <div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+    <div>
+      <div class="font-display text-4xl md:text-5xl font-extrabold mb-2">2,400+</div>
+      <div class="font-body-md text-body-md opacity-90" data-en="Active drivers" data-fr="Chauffeurs actifs">Active drivers</div>
+    </div>
+    <div>
+      <div class="font-display text-4xl md:text-5xl font-extrabold mb-2">180K+</div>
+      <div class="font-body-md text-body-md opacity-90" data-en="Rides completed" data-fr="Courses effectuées">Rides completed</div>
+    </div>
+    <div>
+      <div class="font-display text-4xl md:text-5xl font-extrabold mb-2">100%</div>
+      <div class="font-body-md text-body-md opacity-90" data-en="Fares kept by drivers" data-fr="Tarifs gardés par les chauffeurs">Fares kept by drivers</div>
+    </div>
+    <div>
+      <div class="font-display text-4xl md:text-5xl font-extrabold mb-2">4.9★</div>
+      <div class="font-body-md text-body-md opacity-90" data-en="Average rider rating" data-fr="Note moyenne des passagers">Average rider rating</div>
+    </div>
+  </div>
 </section>
 <!-- How It Works -->
 <section class="py-24 px-margin-desktop max-w-container-max mx-auto">
@@ -310,13 +333,122 @@
 <div class="group relative bg-white p-8 rounded-[2.5rem] border border-outline-variant overflow-hidden floating-shadow">
 <div class="mb-8">
 <span class="font-label-caps text-label-caps text-secondary mb-2 block" data-en="FOR DRIVERS" data-fr="POUR LES CHAUFFEURS">FOR DRIVERS</span>
-<h3 class="font-headline-md text-headline-md mb-4" data-en="The Captain App" data-fr="L'Application Capitaine">The Captain App</h3>
+<h3 class="font-headline-md text-headline-md mb-4" data-en="The Captain App" data-fr="L'Application Chauffeur">The Captain App</h3>
 <p class="text-on-surface-variant" data-en="Powerful earnings dashboard, heatmaps for high-demand areas, and precise navigation tools." data-fr="Tableau de bord des gains puissant, cartes thermiques des zones de forte demande et outils de navigation précis.">Powerful earnings dashboard, heatmaps for high-demand areas, and precise navigation tools.</p>
 </div>
 <img alt="Driver App Mockup" class="rounded-xl w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" src="images/asset-f1317cd98d67.jpg"/ loading="lazy" decoding="async">
 </div>
 </div>
 </div>
+</section>
+<!-- Built for Addis Ababa -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+  <div class="text-center mb-16">
+    <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest" data-en="Built for Addis Ababa" data-fr="Conçu pour Addis-Abeba">Built for Addis Ababa</span>
+    <h2 class="font-display text-headline-lg mt-3" data-en="Made for how Ethiopia moves" data-fr="Pensé pour la mobilité éthiopienne">Made for how Ethiopia moves</h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-surface border border-outline-variant rounded-xl p-8 soft-shadow">
+      <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-5">
+        <span class="material-symbols-outlined text-secondary">badge</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm mb-3" data-en="Fayda ID verified" data-fr="Vérifié par Fayda">Fayda ID verified</h3>
+      <p class="font-body-md text-on-surface-variant" data-en="Every driver is verified against Ethiopia&apos;s Fayda National Digital ID, so you always know who&apos;s behind the wheel." data-fr="Chaque chauffeur est vérifié via la carte d&apos;identité numérique nationale Fayda, pour que vous sachiez toujours qui conduit.">Every driver is verified against Ethiopia&apos;s Fayda National Digital ID, so you always know who&apos;s behind the wheel.</p>
+    </div>
+    <div class="bg-surface border border-outline-variant rounded-xl p-8 soft-shadow">
+      <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-5">
+        <span class="material-symbols-outlined text-secondary">payments</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm mb-3" data-en="Pay with Telebirr &amp; CBE" data-fr="Payez avec Telebirr et CBE">Pay with Telebirr &amp; CBE</h3>
+      <p class="font-body-md text-on-surface-variant" data-en="Pay the way you already do — Telebirr, CBE Birr, or card. Fares go straight to your driver, in Birr." data-fr="Payez comme d&apos;habitude — Telebirr, CBE Birr ou carte. Les tarifs vont directement au chauffeur, en birr.">Pay the way you already do — Telebirr, CBE Birr, or card. Fares go straight to your driver, in Birr.</p>
+    </div>
+    <div class="bg-surface border border-outline-variant rounded-xl p-8 soft-shadow">
+      <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center mb-5">
+        <span class="material-symbols-outlined text-secondary">map</span>
+      </div>
+      <h3 class="font-headline-sm text-headline-sm mb-3" data-en="Local coverage" data-fr="Couverture locale">Local coverage</h3>
+      <p class="font-body-md text-on-surface-variant" data-en="From Bole to Piassa to Megenagna — reliable rides across every kebele in the capital, day and night." data-fr="De Bole à Piassa en passant par Megenagna — des courses fiables dans chaque kebele de la capitale, jour et nuit.">From Bole to Piassa to Megenagna — reliable rides across every kebele in the capital, day and night.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Safety & Verification -->
+<section class="py-24 px-margin-desktop bg-primary-container text-on-primary-fixed overflow-hidden">
+  <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <span class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase tracking-widest" data-en="Safety First" data-fr="La sécurité d&apos;abord">Safety First</span>
+      <h2 class="font-display text-headline-lg mt-3 mb-6" data-en="Every ride, accountable end to end" data-fr="Chaque course, sécurisée de bout en bout">Every ride, accountable end to end</h2>
+      <div class="space-y-5">
+        <div class="flex gap-4">
+          <span class="material-symbols-outlined text-secondary-fixed-dim shrink-0">verified_user</span>
+          <div>
+            <h3 class="font-headline-sm text-lg mb-1" data-en="Identity-verified drivers" data-fr="Chauffeurs à identité vérifiée">Identity-verified drivers</h3>
+            <p class="font-body-md text-on-primary-container" data-en="Biometric Fayda eKYC plus license review before any driver accepts a single ride." data-fr="eKYC biométrique Fayda et vérification du permis avant qu&apos;un chauffeur accepte la moindre course.">Biometric Fayda eKYC plus license review before any driver accepts a single ride.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <span class="material-symbols-outlined text-secondary-fixed-dim shrink-0">share_location</span>
+          <div>
+            <h3 class="font-headline-sm text-lg mb-1" data-en="Live trip sharing" data-fr="Partage de trajet en direct">Live trip sharing</h3>
+            <p class="font-body-md text-on-primary-container" data-en="Share your live location and ETA with family for the length of any trip." data-fr="Partagez votre position et votre heure d&apos;arrivée avec vos proches pendant toute la course.">Share your live location and ETA with family for the length of any trip.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <span class="material-symbols-outlined text-secondary-fixed-dim shrink-0">contact_support</span>
+          <div>
+            <h3 class="font-headline-sm text-lg mb-1" data-en="24/7 support" data-fr="Assistance 24/7">24/7 support</h3>
+            <p class="font-body-md text-on-primary-container" data-en="A dedicated safety line, always one tap away, day or night." data-fr="Une ligne de sécurité dédiée, toujours à un clic, jour et nuit.">A dedicated safety line, always one tap away, day or night.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-secondary/10 border border-secondary-fixed-dim/20 rounded-2xl p-10 text-center">
+      <div class="font-display text-6xl font-extrabold text-white mb-2">100%</div>
+      <p class="font-body-lg text-on-primary-container mb-6" data-en="of drivers pass Fayda identity verification before activation" data-fr="des chauffeurs passent la vérification d&apos;identité Fayda avant activation">of drivers pass Fayda identity verification before activation</p>
+      <div class="border-t border-secondary-fixed-dim/20 pt-6">
+        <div class="font-display text-4xl font-bold text-white mb-2">&lt; 30s</div>
+        <p class="font-body-md text-on-primary-container" data-en="average response from the safety team" data-fr="réponse moyenne de l&apos;équipe de sécurité">average response from the safety team</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-24 px-margin-desktop max-w-3xl mx-auto">
+  <div class="text-center mb-12">
+    <span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest" data-en="Questions" data-fr="Questions">Questions</span>
+    <h2 class="font-display text-headline-lg mt-3" data-en="Frequently asked" data-fr="Foire aux questions">Frequently asked</h2>
+  </div>
+  <div class="space-y-4" id="faq-list">
+    <details class="group bg-surface border border-outline-variant rounded-xl px-6 py-5">
+      <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-lg list-none">
+        <span data-en="Do I pay a commission on each ride?" data-fr="Dois-je payer une commission sur chaque course ?">Do I pay a commission on each ride?</span>
+        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+      </summary>
+      <p class="font-body-md text-on-surface-variant mt-4" data-en="No. Drivers pay one flat monthly subscription and keep 100% of every fare and tip. Riders simply pay the fare — no surge, no hidden middleman cut." data-fr="Non. Les chauffeurs paient un abonnement mensuel fixe et gardent 100 % de chaque tarif et pourboire. Les passagers paient simplement la course — sans majoration ni commission cachée.">No. Drivers pay one flat monthly subscription and keep 100% of every fare and tip. Riders simply pay the fare — no surge, no hidden middleman cut.</p>
+    </details>
+    <details class="group bg-surface border border-outline-variant rounded-xl px-6 py-5">
+      <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-lg list-none">
+        <span data-en="How do I pay for a ride?" data-fr="Comment payer une course ?">How do I pay for a ride?</span>
+        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+      </summary>
+      <p class="font-body-md text-on-surface-variant mt-4" data-en="Pay with Telebirr, CBE Birr, or a bank card directly in the app. Your payment goes straight to your driver." data-fr="Payez avec Telebirr, CBE Birr ou une carte bancaire directement dans l&apos;application. Votre paiement va directement au chauffeur.">Pay with Telebirr, CBE Birr, or a bank card directly in the app. Your payment goes straight to your driver.</p>
+    </details>
+    <details class="group bg-surface border border-outline-variant rounded-xl px-6 py-5">
+      <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-lg list-none">
+        <span data-en="How are drivers verified?" data-fr="Comment les chauffeurs sont-ils vérifiés ?">How are drivers verified?</span>
+        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+      </summary>
+      <p class="font-body-md text-on-surface-variant mt-4" data-en="Every driver completes biometric identity verification through Ethiopia&apos;s Fayda National Digital ID, plus a driver&apos;s license review, before they can accept rides." data-fr="Chaque chauffeur effectue une vérification d&apos;identité biométrique via la carte Fayda, ainsi qu&apos;un contrôle du permis, avant de pouvoir accepter des courses.">Every driver completes biometric identity verification through Ethiopia&apos;s Fayda National Digital ID, plus a driver&apos;s license review, before they can accept rides.</p>
+    </details>
+    <details class="group bg-surface border border-outline-variant rounded-xl px-6 py-5">
+      <summary class="flex justify-between items-center cursor-pointer font-headline-sm text-lg list-none">
+        <span data-en="Which areas do you cover?" data-fr="Quelles zones couvrez-vous ?">Which areas do you cover?</span>
+        <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+      </summary>
+      <p class="font-body-md text-on-surface-variant mt-4" data-en="Rider operates across Addis Ababa — from Bole and Kazanchis to Piassa, Megenagna, and beyond — with expansion to other Ethiopian cities planned." data-fr="Rider opère dans tout Addis-Abeba — de Bole et Kazanchis à Piassa, Megenagna et au-delà — avec une expansion prévue vers d&apos;autres villes éthiopiennes.">Rider operates across Addis Ababa — from Bole and Kazanchis to Piassa, Megenagna, and beyond — with expansion to other Ethiopian cities planned.</p>
+    </details>
+  </div>
 </section>
 <!-- CTA Final -->
 <section class="py-24 px-margin-desktop">
@@ -342,10 +474,12 @@
 <span class="font-headline-sm text-headline-sm text-white"><span class="footer-logo" style="display:inline-flex;align-items:center;gap:8px;">
 <svg width="22" height="22" viewBox="0 0 52 52" aria-hidden="true">
 <circle cx="26" cy="26" r="26" fill="#1565C0"/>
-<polygon points="26,6 29.5,17 41,17 31.5,23.5 35,35 26,28 17,35 20.5,23.5 11,17 22.5,17" fill="none" stroke="#FCDD09" stroke-width="2.5"/>
-<line x1="26" y1="6" x2="26" y2="46" stroke="#FCDD09" stroke-width="2"/>
-<line x1="8" y1="17" x2="44" y2="35" stroke="#FCDD09" stroke-width="2"/>
-<line x1="44" y1="17" x2="8" y2="35" stroke="#FCDD09" stroke-width="2"/>
+<polygon points="26.0,11.0 29.4,21.4 40.3,21.4 31.4,27.8 34.8,38.1 26.0,31.7 17.2,38.1 20.6,27.8 11.7,21.4 22.6,21.4" fill="none" stroke="#FCDD09" stroke-width="2.6"/>
+<line x1="26.0" y1="10.0" x2="26.0" y2="2.0" stroke="#FCDD09" stroke-width="2.4"/>
+<line x1="41.2" y1="21.1" x2="48.8" y2="18.6" stroke="#FCDD09" stroke-width="2.4"/>
+<line x1="35.4" y1="38.9" x2="40.1" y2="45.4" stroke="#FCDD09" stroke-width="2.4"/>
+<line x1="16.6" y1="38.9" x2="11.9" y2="45.4" stroke="#FCDD09" stroke-width="2.4"/>
+<line x1="10.8" y1="21.1" x2="3.2" y2="18.6" stroke="#FCDD09" stroke-width="2.4"/>
 </svg>
 <span style="font-family:'Hanken Grotesk',sans-serif;font-weight:800;font-size:20px;color:#eaf1ff;letter-spacing:-0.02em;">Rider</span>
 </span></span>
