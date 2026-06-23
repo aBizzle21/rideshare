@@ -1,0 +1,16 @@
+{
+  "name": "rider-site",
+  "version": "1.0.0",
+  "description": "Rider — bilingual EN/FR ride-hailing marketing site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

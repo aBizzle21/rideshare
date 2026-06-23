@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<script>
+(function(){try{var l=localStorage.getItem("rider-lang");if(l==="fr"){document.documentElement.classList.add("lang-fr-pre");}}catch(e){}})();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rider | How It Works</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#45464d",
+                    "surface-container": "#e5eeff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "background": "#f8f9ff",
+                    "secondary-fixed": "#dbe1ff",
+                    "primary": "#000000",
+                    "on-background": "#0b1c30",
+                    "on-surface": "#0b1c30",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "surface": "#f8f9ff",
+                    "tertiary-container": "#2a1700",
+                    "on-primary-container": "#7c839b",
+                    "on-tertiary-container": "#b87500",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "secondary-container": "#316bf3",
+                    "primary-fixed": "#dae2fd",
+                    "surface-container-high": "#dce9ff",
+                    "outline": "#76777d",
+                    "primary-fixed-dim": "#bec6e0",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface-container-highest": "#d3e4fe",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "surface-tint": "#565e74",
+                    "surface-container-low": "#eff4ff",
+                    "on-secondary-container": "#fefcff",
+                    "primary-container": "#131b2e",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "surface-variant": "#d3e4fe",
+                    "inverse-surface": "#213145",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#000000",
+                    "on-tertiary-fixed": "#2a1700"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-desktop": "40px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-caps": ["JetBrains Mono"],
+                    "display": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab-indicator {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .toggle-indicator {
+            transition: transform 0.3s ease;
+        }
+    </style>
+  <link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed lang-en">
+<!-- Top Navigation -->
+<header id="site-header" class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/40 shadow-sm transition-shadow">
+  <div class="flex justify-between items-center px-6 md:px-10 h-16 max-w-[1280px] mx-auto gap-6">
+    <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="Rider home">
+<svg width="40" height="40" viewBox="0 0 52 52" aria-hidden="true" class="shrink-0">
+<circle cx="26" cy="26" r="26" fill="#1565C0"/>
+<polygon points="26,6 29.5,17 41,17 31.5,23.5 35,35 26,28 17,35 20.5,23.5 11,17 22.5,17" fill="none" stroke="#FCDD09" stroke-width="2.2"/>
+<line x1="26" y1="6" x2="26" y2="46" stroke="#FCDD09" stroke-width="1.8"/>
+<line x1="8" y1="17" x2="44" y2="35" stroke="#FCDD09" stroke-width="1.8"/>
+<line x1="44" y1="17" x2="8" y2="35" stroke="#FCDD09" stroke-width="1.8"/>
+</svg>
+<span class="rider-logo">Rider</span>
+<span class="rider-dots" aria-hidden="true">
+<span class="rider-dot rider-dot--g"></span>
+<span class="rider-dot rider-dot--y"></span>
+<span class="rider-dot rider-dot--r"></span>
+</span>
+</a>
+    <nav class="hidden md:flex items-center gap-7 flex-1 justify-center">
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html" data-en="Home" data-fr="Accueil">Home</a>
+        <a class="nav-link nav-link--active whitespace-nowrap font-body-md text-body-md" href="how-it-works.html" data-en="How It Works" data-fr="Fonctionnement">How It Works</a>
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="pricing.html" data-en="Pricing" data-fr="Tarifs">Pricing</a>
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="rider-app.html" data-en="Rider App" data-fr="App Passager">Rider App</a>
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="driver-app.html" data-en="Driver App" data-fr="App Chauffeur">Driver App</a>
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="login.html" data-en="Login" data-fr="Connexion">Login</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3 shrink-0">
+      <button aria-label="Switch Language" id="lang-toggle" class="lang-toggle relative flex items-center bg-surface-container rounded-full p-1 w-[72px] h-10 border border-outline-variant focus:outline-none shrink-0"><span class="lang-toggle__indicator"></span><span class="lang-toggle__labels"><span>EN</span><span>FR</span></span></button>
+      <button class="px-5 py-2 bg-secondary text-on-secondary rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all shrink-0" data-en="Request Demo" data-fr="Demander une démo" onclick="location.href='request-demo.html'">Request Demo</button>
+    </div>
+    <button id="menu-toggle" aria-label="Open menu" class="md:hidden p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" hidden class="md:hidden bg-surface border-t border-outline-variant px-6 py-4">
+    <a class="block py-3 text-body-lg text-on-surface-variant" href="index.html" data-en="Home" data-fr="Accueil">Home</a>
+        <a class="block py-3 text-body-lg text-secondary font-bold" href="how-it-works.html" data-en="How It Works" data-fr="Fonctionnement">How It Works</a>
+        <a class="block py-3 text-body-lg text-on-surface-variant" href="pricing.html" data-en="Pricing" data-fr="Tarifs">Pricing</a>
+        <a class="block py-3 text-body-lg text-on-surface-variant" href="rider-app.html" data-en="Rider App" data-fr="App Passager">Rider App</a>
+        <a class="block py-3 text-body-lg text-on-surface-variant" href="driver-app.html" data-en="Driver App" data-fr="App Chauffeur">Driver App</a>
+        <a class="block py-3 text-body-lg text-on-surface-variant" href="login.html" data-en="Login" data-fr="Connexion">Login</a>
+    <div class="flex items-center gap-3 mt-4 pt-4 border-t border-outline-variant">
+      <button aria-label="Switch Language" id="lang-toggle-mobile" class="lang-toggle relative flex items-center bg-surface-container rounded-full p-1 w-[72px] h-10 border border-outline-variant focus:outline-none shrink-0"><span class="lang-toggle__indicator"></span><span class="lang-toggle__labels"><span>EN</span><span>FR</span></span></button>
+      <button class="px-5 py-2 bg-secondary text-on-secondary rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all shrink-0" data-en="Request Demo" data-fr="Demander une démo" onclick="location.href='request-demo.html'">Request Demo</button>
+    </div>
+  </div>
+</header>
+<main class="pt-16 pb-24">
+<section class="max-w-container-max mx-auto px-margin-desktop mb-24">
+<div class="text-center space-y-6 max-w-3xl mx-auto">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest" data-en="Efficiency in Motion" data-fr="L'efficacité en mouvement">Efficiency in Motion</span>
+<h1 class="font-display text-display text-primary leading-tight" data-en="How It Works" data-fr="Comment ça marche">How It Works</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant" data-en="Experience the future of urban mobility through our sophisticated ecosystem designed for seamless coordination between riders, drivers, and fleet operators." data-fr="Découvrez l'avenir de la mobilité urbaine grâce à notre écosystème sophistiqué conçu pour une coordination fluide entre passagers, chauffeurs et gestionnaires de flotte.">Experience the future of urban mobility through our sophisticated ecosystem designed for seamless coordination between riders, drivers, and fleet operators.</p>
+</div>
+</section>
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex justify-center mb-16">
+<div class="bg-surface-container-low p-1.5 rounded-xl flex relative w-full shadow-inner border border-outline-variant/30 max-w-md">
+<button class="flex-1 py-3 px-6 rounded-lg font-body-md font-bold z-10 transition-colors text-secondary" data-en="For Riders" data-fr="Pour Passagers" id="tab-riders" onclick="switchTab('riders')">For Riders</button>
+<button class="flex-1 py-3 px-6 rounded-lg font-body-md font-bold z-10 transition-colors text-on-surface-variant" data-en="For Drivers" data-fr="Pour Chauffeurs" id="tab-drivers" onclick="switchTab('drivers')">For Drivers</button>
+<div class="absolute top-1.5 bottom-1.5 left-1.5 bg-surface shadow-sm border border-outline-variant/20 rounded-lg active-tab-indicator w-[calc(50%-4px)]" id="tab-indicator"></div>
+</div>
+</div>
+<!-- Content Area: Riders -->
+<div class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8" id="content-riders">
+<div class="relative group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">login</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Login" data-fr="Connexion">Login</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Secure biometric authentication or OTP login to access your personal profile instantly." data-fr="Authentification biométrique sécurisée ou connexion par code OTP pour accéder instantanément à votre profil.">Secure biometric authentication or OTP login to access your personal profile instantly.</p>
+</div>
+<div class="hidden lg:block absolute top-1/2 -right-4 translate-x-1/2 -translate-y-1/2 z-20 text-outline-variant">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<div class="relative group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Set Pickup" data-fr="Point de Départ">Set Pickup</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Select your destination using our high-precision map interface with real-time ETA predictions." data-fr="Sélectionnez votre destination via notre interface cartographique de précision avec estimation du temps d'arrivée en temps réel.">Select your destination using our high-precision map interface with real-time ETA predictions.</p>
+</div>
+<div class="hidden lg:block absolute top-1/2 -right-4 translate-x-1/2 -translate-y-1/2 z-20 text-outline-variant">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<div class="relative group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Review Fare" data-fr="Vérifier le Tarif">Review Fare</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Transparent pricing models with no hidden costs. Confirm your upfront fare estimation." data-fr="Modèles de tarification transparents sans frais cachés. Confirmez votre estimation de prix à l'avance.">Transparent pricing models with no hidden costs. Confirm your upfront fare estimation.</p>
+</div>
+<div class="hidden lg:block absolute top-1/2 -right-4 translate-x-1/2 -translate-y-1/2 z-20 text-outline-variant">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<div class="relative group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">near_me</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Track Ride" data-fr="Suivre le Trajet">Track Ride</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Live GPS tracking of your assigned driver. View vehicle details and contact information." data-fr="Suivi GPS en direct de votre chauffeur. Consultez les détails du véhicule et les coordonnées de contact.">Live GPS tracking of your assigned driver. View vehicle details and contact information.</p>
+</div>
+<div class="hidden lg:block absolute top-1/2 -right-4 translate-x-1/2 -translate-y-1/2 z-20 text-outline-variant">
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<div class="group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">star</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Payment &amp; Rating" data-fr="Paiement et Note">Payment &amp; Rating</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Automated digital payment processing followed by mutual rating to ensure quality service." data-fr="Traitement automatisé du paiement numérique suivi d'une évaluation mutuelle pour garantir la qualité du service.">Automated digital payment processing followed by mutual rating to ensure quality service.</p>
+</div>
+</div>
+</div>
+<!-- Content Area: Drivers (Hidden by default) -->
+<div class="tab-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8" id="content-drivers">
+<div class="relative group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">toggle_on</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Login/Online" data-fr="En Ligne">Login/Online</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Toggle your availability status and start receiving ride requests in your current zone." data-fr="Activez votre statut de disponibilité et commencez à recevoir des demandes dans votre zone actuelle.">Toggle your availability status and start receiving ride requests in your current zone.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Accept Offer" data-fr="Accepter l'Offre">Accept Offer</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Review incoming ride offers including pickup distance and estimated earnings before accepting." data-fr="Examinez les offres entrantes, y compris la distance de ramassage et les revenus estimés avant d'accepter.">Review incoming ride offers including pickup distance and estimated earnings before accepting.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">navigation</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Navigate" data-fr="Naviguer">Navigate</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Optimized turn-by-turn navigation to the rider's location and then to the final destination." data-fr="Navigation optimisée virage par virage vers l'emplacement du passager, puis vers la destination finale.">Optimized turn-by-turn navigation to the rider's location and then to the final destination.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Complete Trip" data-fr="Terminer la Course">Complete Trip</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Verify drop-off location and end the trip to trigger the automated invoicing system." data-fr="Vérifiez le lieu de dépose et terminez le trajet pour déclencher le système de facturation automatique.">Verify drop-off location and end the trip to trigger the automated invoicing system.</p>
+</div>
+</div>
+<div class="group">
+<div class="bg-surface p-8 rounded-xl border border-outline-variant shadow-[0px_2px_4px_rgba(15,23,42,0.05)] h-full transition-all duration-300 group-hover:shadow-[0px_10px_15px_rgba(15,23,42,0.1)] group-hover:-translate-y-1">
+<div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-3" data-en="Review Earnings" data-fr="Consulter Revenus">Review Earnings</h3>
+<p class="text-on-surface-variant font-body-sm" data-en="Access detailed daily earnings reports, bonuses, and rider feedback in your dashboard." data-fr="Accédez aux rapports de revenus quotidiens, aux bonus et aux commentaires des passagers sur votre tableau de bord.">Access detailed daily earnings reports, bonuses, and rider feedback in your dashboard.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Visualization Section (Bento Grid) -->
+<section class="mt-32 max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-7 bg-primary-container text-on-primary-container p-12 rounded-2xl flex flex-col justify-between min-h-[400px] overflow-hidden relative group">
+<div class="relative z-10">
+<h2 class="font-headline-md text-headline-md mb-4 text-white" data-en="Technological Precision" data-fr="Précision Technologique">Technological Precision</h2>
+<p class="font-body-md opacity-80 max-w-md" data-en="Our backend utilizes edge computing to calculate routes and matching algorithms in milliseconds." data-fr="Notre backend utilise l'edge computing pour calculer les itinéraires et les algorithmes de correspondance en quelques millisecondes.">Our backend utilizes edge computing to calculate routes and matching algorithms in milliseconds.</p>
+</div>
+<div class="mt-8 relative z-10">
+<div class="flex gap-4 items-end">
+<div class="h-24 w-12 bg-secondary rounded-t-lg transition-all duration-500 group-hover:h-32"></div>
+<div class="h-16 w-12 bg-secondary/60 rounded-t-lg transition-all duration-500 group-hover:h-24"></div>
+<div class="h-32 w-12 bg-secondary rounded-t-lg transition-all duration-500 group-hover:h-40"></div>
+<div class="h-20 w-12 bg-secondary/60 rounded-t-lg transition-all duration-500 group-hover:h-28"></div>
+</div>
+</div>
+<div class="absolute right-0 bottom-0 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined !text-[240px]" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+</div>
+<div class="md:col-span-5 bg-surface-container p-12 rounded-2xl border border-outline-variant flex flex-col justify-center">
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+<div>
+<h4 class="font-bold" data-en="Enterprise Reliability" data-fr="Fiabilité Entreprise">Enterprise Reliability</h4>
+<p class="text-sm text-on-surface-variant" data-en="99.9% uptime guaranteed for core services." data-fr="Disponibilité de 99,9 % garantie pour les services de base.">99.9% uptime guaranteed for core services.</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary">encrypted</span>
+</div>
+<div>
+<h4 class="font-bold" data-en="End-to-End Encryption" data-fr="Chiffrement de bout en bout">End-to-End Encryption</h4>
+<p class="text-sm text-on-surface-variant" data-en="Your personal data is encrypted and secure." data-fr="Vos données personnelles sont chiffrées et sécurisées.">Your personal data is encrypted and secure.</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-secondary">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold" data-en="24/7 Priority Support" data-fr="Support Prioritaire 24/7">24/7 Priority Support</h4>
+<p class="text-sm text-on-surface-variant" data-en="Dedicated team for immediate assistance." data-fr="Une équipe dédiée pour une assistance immédiate.">Dedicated team for immediate assistance.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-16 px-margin-desktop bg-primary-container flex flex-col items-center gap-8 border-t border-outline-variant">
+<div class="font-headline-sm text-headline-sm text-on-primary-fixed font-bold text-white mb-8"><span class="footer-logo" style="display:inline-flex;align-items:center;gap:8px;">
+<svg width="22" height="22" viewBox="0 0 52 52" aria-hidden="true">
+<circle cx="26" cy="26" r="26" fill="#1565C0"/>
+<polygon points="26,6 29.5,17 41,17 31.5,23.5 35,35 26,28 17,35 20.5,23.5 11,17 22.5,17" fill="none" stroke="#FCDD09" stroke-width="2.5"/>
+<line x1="26" y1="6" x2="26" y2="46" stroke="#FCDD09" stroke-width="2"/>
+<line x1="8" y1="17" x2="44" y2="35" stroke="#FCDD09" stroke-width="2"/>
+<line x1="44" y1="17" x2="8" y2="35" stroke="#FCDD09" stroke-width="2"/>
+</svg>
+<span style="font-family:'Hanken Grotesk',sans-serif;font-weight:800;font-size:20px;color:#eaf1ff;letter-spacing:-0.02em;">Rider</span>
+</span></div>
+<div class="flex flex-wrap justify-center gap-8 mb-8">
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Privacy Policy" data-fr="Politique de Confidentialité" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Terms of Service" data-fr="Conditions d'Utilisation" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Contact" data-fr="Contact" href="#">Contact</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Support" data-fr="Assistance" href="#">Support</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Careers" data-fr="Carrières" href="#">Careers</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary-container/60" data-en="© 2026 Rider. All rights reserved." data-fr="© 2026 Rider. Tous droits réservés.">© 2026 Rider. All rights reserved.</p>
+</footer>
+<script>
+    let currentLang = 'en';
+
+    function setLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+        
+        // Update toggle UI
+        const indicator = document.getElementById('toggle-circle');
+        
+        if (lang === 'en') {
+            indicator.style.transform = 'translateX(0)';
+        } else {
+            indicator.style.transform = 'translateX(32px)';
+        }
+
+        // Translate all elements with data-en/data-fr
+        const translatable = document.querySelectorAll('[data-en]');
+        translatable.forEach(el => {
+            el.innerText = el.getAttribute(`data-${lang}`);
+        });
+
+        // Update page title
+        document.title = lang === 'en' ? 'How It Works - Rider' : 'Comment ça marche - Rider';
+    }
+
+    function toggleLanguage() {
+        const nextLang = currentLang === 'en' ? 'fr' : 'en';
+        setLanguage(nextLang);
+    }
+
+    function switchTab(tabId) {
+        const tabs = ['riders', 'drivers'];
+        const indicator = document.getElementById('tab-indicator');
+        
+        tabs.forEach((id, index) => {
+            const btn = document.getElementById(`tab-${id}`);
+            const content = document.getElementById(`content-${id}`);
+            
+            if (id === tabId) {
+                btn.classList.add('text-secondary');
+                btn.classList.remove('text-on-surface-variant');
+                content.classList.remove('hidden');
+                indicator.style.transform = `translateX(${index * 100}%)`;
+            } else {
+                btn.classList.remove('text-secondary');
+                btn.classList.add('text-on-surface-variant');
+                content.classList.add('hidden');
+            }
+        });
+    }
+
+    // Initialize with English
+    setLanguage('en');
+</script>
+  <script src="js/main.js"></script>
+</body></html>

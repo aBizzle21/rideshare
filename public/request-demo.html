@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<script>
+(function(){try{var l=localStorage.getItem("rider-lang");if(l==="fr"){document.documentElement.classList.add("lang-fr-pre");}}catch(e){}})();
+</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rider | Request a Demo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#45464d",
+                    "surface-container": "#e5eeff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#131b2e",
+                    "background": "#f8f9ff",
+                    "secondary-fixed": "#dbe1ff",
+                    "primary": "#000000",
+                    "on-background": "#0b1c30",
+                    "on-surface": "#0b1c30",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#b4c5ff",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary-fixed-variant": "#003ea8",
+                    "surface": "#f8f9ff",
+                    "tertiary-container": "#2a1700",
+                    "on-primary-container": "#7c839b",
+                    "on-tertiary-container": "#b87500",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "secondary-container": "#316bf3",
+                    "primary-fixed": "#dae2fd",
+                    "surface-container-high": "#dce9ff",
+                    "outline": "#76777d",
+                    "primary-fixed-dim": "#bec6e0",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary-fixed": "#00174b",
+                    "secondary": "#0051d5",
+                    "surface-container-highest": "#d3e4fe",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "surface-tint": "#565e74",
+                    "surface-variant": "#d3e4fe",
+                    "inverse-surface": "#213145",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#bec6e0",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#000000",
+                    "on-tertiary-fixed": "#2a1700"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-desktop": "40px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-caps": ["JetBrains Mono"],
+                    "display": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            box-shadow: 0 0 0 2px rgba(0, 81, 213, 0.2);
+            border-color: #0051d5;
+        }
+        .step-transition {
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+        }
+        .hidden-step {
+            display: none !important;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        .language-toggle-bg {
+            background: rgba(229, 238, 255, 0.5);
+            backdrop-filter: blur(4px);
+        }
+        .toggle-indicator {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .lang-en .toggle-indicator {
+            transform: translateX(0);
+        }
+        .lang-fr .toggle-indicator {
+            transform: translateX(32px);
+        }
+    </style>
+  <link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body class="bg-background font-body-md text-on-background selection:bg-secondary-fixed selection:text-on-secondary-fixed lang-en">
+<!-- TopNavBar -->
+<!-- Top Navigation -->
+<header id="site-header" class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/40 shadow-sm transition-shadow">
+  <div class="flex justify-between items-center px-6 md:px-10 h-16 max-w-[1280px] mx-auto gap-6">
+    <a href="index.html" class="flex items-center gap-3 shrink-0" aria-label="Rider home">
+<svg width="40" height="40" viewBox="0 0 52 52" aria-hidden="true" class="shrink-0">
+<circle cx="26" cy="26" r="26" fill="#1565C0"/>
+<polygon points="26,6 29.5,17 41,17 31.5,23.5 35,35 26,28 17,35 20.5,23.5 11,17 22.5,17" fill="none" stroke="#FCDD09" stroke-width="2.2"/>
+<line x1="26" y1="6" x2="26" y2="46" stroke="#FCDD09" stroke-width="1.8"/>
+<line x1="8" y1="17" x2="44" y2="35" stroke="#FCDD09" stroke-width="1.8"/>
+<line x1="44" y1="17" x2="8" y2="35" stroke="#FCDD09" stroke-width="1.8"/>
+</svg>
+<span class="rider-logo">Rider</span>
+<span class="rider-dots" aria-hidden="true">
+<span class="rider-dot rider-dot--g"></span>
+<span class="rider-dot rider-dot--y"></span>
+<span class="rider-dot rider-dot--r"></span>
+</span>
+</a>
+    <nav class="hidden md:flex items-center gap-7 flex-1 justify-center">
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="index.html" data-en="Home" data-fr="Accueil">Home</a>
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="how-it-works.html" data-en="How It Works" data-fr="Fonctionnement">How It Works</a>
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="pricing.html" data-en="Pricing" data-fr="Tarifs">Pricing</a>
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="rider-app.html" data-en="Rider App" data-fr="App Passager">Rider App</a>
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="driver-app.html" data-en="Driver App" data-fr="App Chauffeur">Driver App</a>
+        <a class="nav-link whitespace-nowrap font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="login.html" data-en="Login" data-fr="Connexion">Login</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3 shrink-0">
+      <button aria-label="Switch Language" id="lang-toggle" class="lang-toggle relative flex items-center bg-surface-container rounded-full p-1 w-[72px] h-10 border border-outline-variant focus:outline-none shrink-0"><span class="lang-toggle__indicator"></span><span class="lang-toggle__labels"><span>EN</span><span>FR</span></span></button>
+      <button class="px-5 py-2 bg-secondary text-on-secondary rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all shrink-0" data-en="Request Demo" data-fr="Demander une démo" onclick="location.href='request-demo.html'">Request Demo</button>
+    </div>
+    <button id="menu-toggle" aria-label="Open menu" class="md:hidden p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" hidden class="md:hidden bg-surface border-t border-outline-variant px-6 py-4">
+    <a class="block py-3 text-body-lg text-on-surface-variant" href="index.html" data-en="Home" data-fr="Accueil">Home</a>
+        <a class="block py-3 text-body-lg text-on-surface-variant" href="how-it-works.html" data-en="How It Works" data-fr="Fonctionnement">How It Works</a>
+        <a class="block py-3 text-body-lg text-on-surface-variant" href="pricing.html" data-en="Pricing" data-fr="Tarifs">Pricing</a>
+        <a class="block py-3 text-body-lg text-on-surface-variant" href="rider-app.html" data-en="Rider App" data-fr="App Passager">Rider App</a>
+        <a class="block py-3 text-body-lg text-on-surface-variant" href="driver-app.html" data-en="Driver App" data-fr="App Chauffeur">Driver App</a>
+        <a class="block py-3 text-body-lg text-on-surface-variant" href="login.html" data-en="Login" data-fr="Connexion">Login</a>
+    <div class="flex items-center gap-3 mt-4 pt-4 border-t border-outline-variant">
+      <button aria-label="Switch Language" id="lang-toggle-mobile" class="lang-toggle relative flex items-center bg-surface-container rounded-full p-1 w-[72px] h-10 border border-outline-variant focus:outline-none shrink-0"><span class="lang-toggle__indicator"></span><span class="lang-toggle__labels"><span>EN</span><span>FR</span></span></button>
+      <button class="px-5 py-2 bg-secondary text-on-secondary rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all shrink-0" data-en="Request Demo" data-fr="Demander une démo" onclick="location.href='request-demo.html'">Request Demo</button>
+    </div>
+  </div>
+</header>
+<main class="pt-16 pb-24 min-h-screen flex items-center justify-center relative overflow-hidden">
+<!-- Background Accents -->
+<div class="absolute top-0 right-0 -mr-24 -mt-24 w-[600px] h-[600px] bg-secondary-fixed/30 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 -ml-24 -mb-24 w-[400px] h-[400px] bg-surface-container-high rounded-full blur-[80px] pointer-events-none"></div>
+<div class="w-full max-w-3xl px-margin-mobile relative z-10">
+<!-- Form Page Container -->
+<div class="step-transition" id="demo-form-step">
+<div class="text-center mb-12">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-4 block" data-en="Enterprise Mobility Solutions" data-fr="Solutions de Mobilité d'Entreprise">Enterprise Mobility Solutions</span>
+<h1 class="font-headline-lg text-headline-lg mb-4" data-en="Request a Demo" data-fr="Demander une démo">Request a Demo</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto" data-en="Experience how Rider can transform your logistics fleet with real-time tracking, AI optimization, and seamless driver management." data-fr="Découvrez comment Rider peut transformer votre flotte logistique avec un suivi en temps réel, une optimisation par l'IA et une gestion fluide des chauffeurs.">
+                        Experience how Rider can transform your logistics fleet with real-time tracking, AI optimization, and seamless driver management.
+                    </p>
+</div>
+<!-- Form Card -->
+<div class="bg-surface shadow-[0_10px_15px_rgba(15,23,42,0.1)] border border-outline-variant rounded-xl p-8 md:p-12">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-6" id="demo-request-form">
+<!-- Company Name -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface-variant" data-en="Company Name *" data-fr="Nom de l'entreprise *" for="company">Company Name *</label>
+<input class="bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none form-input-focus transition-all" data-placeholder-en="e.g. Global Logistics Corp" data-placeholder-fr="ex. Global Logistics Corp" id="company" placeholder="e.g. Global Logistics Corp" required="" type="text"/>
+</div>
+<!-- Contact Person -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface-variant" data-en="Contact Person *" data-fr="Personne de contact *" for="contact">Contact Person *</label>
+<input class="bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none form-input-focus transition-all" data-placeholder-en="Full Name" data-placeholder-fr="Nom complet" id="contact" placeholder="Full Name" required="" type="text"/>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface-variant" data-en="Business Email *" data-fr="E-mail professionnel *" for="email">Business Email *</label>
+<input class="bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none form-input-focus transition-all" data-placeholder-en="name@company.com" data-placeholder-fr="nom@entreprise.com" id="email" placeholder="name@company.com" required="" type="email"/>
+</div>
+<!-- Phone -->
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface-variant" data-en="Phone Number" data-fr="Numéro de téléphone" for="phone">Phone Number</label>
+<input class="bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none form-input-focus transition-all" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<!-- Fleet Size -->
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface-variant" data-en="Estimated Fleet Size" data-fr="Taille estimée de la flotte" for="fleet">Estimated Fleet Size</label>
+<select class="bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none form-input-focus transition-all appearance-none cursor-pointer" id="fleet">
+<option data-en="1 - 10 vehicles" data-fr="1 - 10 véhicules" value="1-10">1 - 10 vehicles</option>
+<option data-en="11 - 50 vehicles" data-fr="11 - 50 véhicules" value="11-50">11 - 50 vehicles</option>
+<option data-en="51 - 200 vehicles" data-fr="51 - 200 véhicules" value="51-200">51 - 200 vehicles</option>
+<option data-en="200+ vehicles" data-fr="200+ véhicules" value="200+">200+ vehicles</option>
+</select>
+</div>
+<!-- Comments -->
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface-variant" data-en="Specific Interests or Comments" data-fr="Intérêts spécifiques ou commentaires" for="comments">Specific Interests or Comments</label>
+<textarea class="bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none form-input-focus transition-all resize-none" data-placeholder-en="Tell us about your specific mobility challenges..." data-placeholder-fr="Parlez-nous de vos défis de mobilité spécifiques..." id="comments" placeholder="Tell us about your specific mobility challenges..." rows="4"></textarea>
+</div>
+<!-- Submit -->
+<div class="md:col-span-2 mt-4">
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-body-md text-body-md font-bold shadow-md hover:shadow-lg transition-all active:scale-[0.98]" data-en="Submit Demo Request" data-fr="Envoyer la demande de démo" type="submit">
+                                Submit Demo Request
+                            </button>
+<p class="text-center font-body-sm text-body-sm text-on-surface-variant mt-4">
+<span class="" data-en="* Required fields. By submitting, you agree to our" data-fr="* Champs requis. En soumettant, vous acceptez notre">* Required fields. By submitting, you agree to our</span> <a class="text-secondary hover:underline" data-en="Privacy Policy" data-fr="Politique de confidentialité" href="#">Privacy Policy</a>.
+                            </p>
+</div>
+</form>
+</div>
+<!-- Trust Badges -->
+<div class="mt-16 flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+<img alt="Trusted Partner 1" class="h-8 md:h-10" data-alt="A clean, minimalist monochrome logo of a fortune 500 logistics company, presented in a high-fidelity vector style on a light background to convey corporate trust and established market presence." src="images/asset-5ad15b016212.jpg"/ loading="lazy" decoding="async">
+<img alt="Trusted Partner 2" class="h-8 md:h-10" data-alt="A modern corporate emblem of a global transportation firm, featuring professional linework and sophisticated typography, styled to integrate seamlessly into a premium tech-focused UI." src="images/asset-bc96c3f816cb.jpg"/ loading="lazy" decoding="async">
+<img alt="Trusted Partner 3" class="h-8 md:h-10" data-alt="A sleek industrial logo representing a major automotive manufacturing partner, rendered with clean edges and balanced spacing to reflect reliability and engineering precision." src="images/asset-a9994cf56db1.jpg"/ loading="lazy" decoding="async">
+</div>
+</div>
+<!-- Confirmation Section -->
+<div class="hidden-step step-transition text-center" id="confirmation-step">
+<div class="bg-surface shadow-[0_20px_25px_rgba(15,23,42,0.15)] border border-outline-variant rounded-xl p-12 md:p-16 flex flex-col items-center">
+<div class="w-20 h-20 bg-secondary-fixed rounded-full flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-secondary text-5xl">check_circle</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4" data-en="Demo Request Submitted" data-fr="Demande de démo envoyée">Demo Request Submitted</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto mb-10" data-en="Thank you! Our enterprise solution team has received your request. We will be in touch shortly to schedule your personalized demo." data-fr="Merci ! Notre équipe de solutions d'entreprise a bien reçu votre demande. Nous vous contacterons prochainement pour planifier votre démo personnalisée.">
+                        Thank you! Our enterprise solution team has received your request. We will be in touch shortly to schedule your personalized demo.
+                    </p>
+<div class="w-full h-px bg-outline-variant mb-10"></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg font-body-md text-body-md font-bold hover:shadow-lg transition-all active:scale-95" data-en="Return to Home" data-fr="Retour à l'accueil" onclick="location.reload()">
+                            Return to Home
+                        </button>
+<a class="border border-secondary text-secondary px-10 py-4 rounded-lg font-body-md text-body-md font-bold hover:bg-secondary-fixed transition-all active:scale-95" data-en="View Case Studies" data-fr="Voir les études de cas" href="#">
+                            View Case Studies
+                        </a>
+</div>
+</div>
+<!-- Atmospheric Visual -->
+<div class="mt-12 overflow-hidden rounded-xl border border-outline-variant shadow-sm aspect-video w-full max-w-2xl mx-auto">
+<img class="w-full h-full object-cover" data-alt="A professional, bright meeting room in a modern skyscraper overlooking a city skyline at dusk. Three business professionals are shaking hands warmly near a large glass window, illuminated by soft warm interior lighting and the cool blue hour light from outside. The scene conveys successful partnership, technological enterprise, and a premium corporate environment with a clean, high-end aesthetic." src="images/asset-84bbd42a783c.jpg"/ loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-margin-desktop flex flex-col items-center gap-8 bg-primary-container dark:bg-primary-fixed border-t border-outline-variant dark:border-outline">
+<div class="font-headline-sm text-headline-sm text-on-primary-container dark:text-on-primary-fixed mb-4"><span class="footer-logo" style="display:inline-flex;align-items:center;gap:8px;">
+<svg width="22" height="22" viewBox="0 0 52 52" aria-hidden="true">
+<circle cx="26" cy="26" r="26" fill="#1565C0"/>
+<polygon points="26,6 29.5,17 41,17 31.5,23.5 35,35 26,28 17,35 20.5,23.5 11,17 22.5,17" fill="none" stroke="#FCDD09" stroke-width="2.5"/>
+<line x1="26" y1="6" x2="26" y2="46" stroke="#FCDD09" stroke-width="2"/>
+<line x1="8" y1="17" x2="44" y2="35" stroke="#FCDD09" stroke-width="2"/>
+<line x1="44" y1="17" x2="8" y2="35" stroke="#FCDD09" stroke-width="2"/>
+</svg>
+<span style="font-family:'Hanken Grotesk',sans-serif;font-weight:800;font-size:20px;color:#eaf1ff;letter-spacing:-0.02em;">Rider</span>
+</span></div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-body-sm text-body-sm text-on-primary-container/80 dark:text-on-primary-fixed/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Privacy Policy" data-fr="Politique de confidentialité" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 dark:text-on-primary-fixed/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Terms of Service" data-fr="Conditions d'utilisation" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 dark:text-on-primary-fixed/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Contact" data-fr="Contact" href="#">Contact</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 dark:text-on-primary-fixed/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Support" data-fr="Support" href="#">Support</a>
+<a class="font-body-sm text-body-sm text-on-primary-container/80 dark:text-on-primary-fixed/80 hover:text-secondary-fixed transition-colors hover:underline" data-en="Careers" data-fr="Carrières" href="#">Careers</a>
+</div>
+<div class="font-body-sm text-body-sm text-on-primary-container/60 dark:text-on-primary-fixed/60">
+            © 2026 Rider. <span class="" data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span>
+</div>
+</footer>
+<script>
+        // Language Toggle Logic
+        let currentLang = 'en';
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const body = document.body;
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            
+            // Update Body Class for CSS Transitions
+            if (lang === 'en') {
+                body.classList.remove('lang-fr');
+                body.classList.add('lang-en');
+            } else {
+                body.classList.remove('lang-en');
+                body.classList.add('lang-fr');
+            }
+
+            // Update Content
+            const elementsWithLang = document.querySelectorAll('[data-en][data-fr]');
+            elementsWithLang.forEach(el => {
+                // Special handling for elements that might have icons or complex children but here they are mostly text
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+
+            // Update Placeholders
+            const inputsWithLang = document.querySelectorAll('input[data-placeholder-en], textarea[data-placeholder-en]');
+            inputsWithLang.forEach(input => {
+                input.placeholder = input.getAttribute(`data-placeholder-${lang}`);
+            });
+        }
+
+        langToggleBtn.addEventListener('click', () => {
+            updateLanguage(currentLang === 'en' ? 'fr' : 'en');
+        });
+
+        // Initialize with English
+        updateLanguage('en');
+
+        // Form Logic
+        const form = document.getElementById('demo-request-form');
+        const formStep = document.getElementById('demo-form-step');
+        const confirmationStep = document.getElementById('confirmation-step');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Start transition
+            formStep.classList.add('opacity-0', '-translate-y-4');
+            
+            setTimeout(() => {
+                formStep.classList.add('hidden');
+                confirmationStep.classList.remove('hidden-step');
+                
+                // Trigger confirmation reveal
+                setTimeout(() => {
+                    confirmationStep.classList.remove('opacity-0', 'translate-y-10');
+                    confirmationStep.classList.add('opacity-100', 'translate-y-0');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 50);
+            }, 400);
+        });
+
+        // Add input focus effects visually via JS for extra polish
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                const label = input.parentElement.querySelector('label');
+                if(label) label.classList.add('text-secondary');
+            });
+            input.addEventListener('blur', () => {
+                const label = input.parentElement.querySelector('label');
+                if(label) label.classList.remove('text-secondary');
+            });
+        });
+    </script>
+  <script src="js/main.js"></script>
+</body></html>
